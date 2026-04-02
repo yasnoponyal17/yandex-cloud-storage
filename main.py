@@ -12,6 +12,6 @@ s3.delete_object(Bucket='compworkshop', Key="temp.txt")
 for key in s3.list_objects(Bucket='compworkshop')['Contents']:
 	print(key['Key'])
 
-# Получить определенный объект
+# Получить содержимое файла
 object = s3.get_object(Bucket='compworkshop', Key='example.txt')
 print(object['Body'].read())
